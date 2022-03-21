@@ -13,11 +13,11 @@ buttonDecrement.addEventListener('click', onTargetButtonClickDecrement);
 let number = 0;
 
 function onTargetButtonClickIncrement(){
-   number ++;
+   number =+ number + 1;
    counterValue.textContent = number;
 }
 
 function onTargetButtonClickDecrement(){
-    number --;
+    number =+ number - 1;
     counterValue.textContent = number;
 }
