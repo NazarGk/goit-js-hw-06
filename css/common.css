@@ -27,6 +27,7 @@ button {
 
 .image_list{
 list-style: none;
+margin-right: 10px;
 }
 
 
@@ -34,5 +35,4 @@ list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }

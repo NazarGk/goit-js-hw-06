@@ -14,41 +14,18 @@ const images = [
 ];
 
 
-const imagesWay = images.map(image => image.url);
-const imagesAlts = images.map(alt => alt.alt);
+const a = images.map(image =>{
+  const b = document.createElement('img');
+  b.src = image.url;
+  b.alt = image.alt;
+  b.width = 320;
 
-
-const listFirstEl = document.createElement('li');
-const imageFirstEl = document.createElement('img');
-listFirstEl.append(imageFirstEl);
-
-listFirstEl.classList = 'image_list';
-imageFirstEl.alt = imagesAlts[0];
-imageFirstEl.src = imagesWay[0];
-imageFirstEl.width = 320;
-
-
-const listSecondEl = document.createElement('li');
-const imageSecondEl = document.createElement('img');
-listSecondEl.append(imageSecondEl);
-
-listSecondEl.classList = 'image_list';
-imageSecondEl.alt = imagesAlts[1];
-imageSecondEl.src = imagesWay[1];
-imageSecondEl.width = 320;
-
-
-const listThirdEl = document.createElement('li');
-const imageThirdEl = document.createElement('img');
-listThirdEl.append(imageThirdEl);
-
-listThirdEl.classList = 'image_list';
-imageThirdEl.alt = imagesAlts[2];
-imageThirdEl.src = imagesWay[2];
-imageThirdEl.width = 320;
-
+  const c = document.createElement('li');
+  console.log(c);
+  c.append(b);
+  c.classList = 'image_list';
 
 const galleryPhotos = document.querySelector('.gallery');
-galleryPhotos.append(listFirstEl, listSecondEl, listThirdEl);
-console.log(galleryPhotos);
+galleryPhotos.append(c);
+})
 
