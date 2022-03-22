@@ -7,16 +7,25 @@ formEl.addEventListener('submit', handleSumbit);
 
 function handleSumbit(event) {
     event.preventDefault();
+    const formElements = event.currentTarget.elements;
 
-    const formData = new FormData(event.currentTarget);
-    console.log(formData);
+    const mail = formElements.email.value;
     
-    formData.forEach((name, value) => {
-        console.log(value, name);
-    });
+
+    const password = formElements.password.value;
+    
+
+    const formData = {
+        mail,
+        password,
+    }
+    
 
     if(event.currentTarget.elements.email.value == '' || event.currentTarget.elements.password.value == ''){
-        return alert('Use your keybord man!');
-    }
-    event.currentTarget.reset();
+        alert('Use your keybord man!');
+    } else {console.log('Email :', mail); console.log('Paswword :', password); console.log(formData);
 }
+event.currentTarget.reset();
+}
+    
+
