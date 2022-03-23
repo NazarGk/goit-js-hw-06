@@ -14,18 +14,31 @@ const images = [
 ];
 
 
-const a = images.map(image =>{
-  const b = document.createElement('img');
-  b.src = image.url;
-  b.alt = image.alt;
-  b.width = 320;
 
-  const c = document.createElement('li');
-  console.log(c);
-  c.append(b);
-  c.classList = 'image_list';
+
+
+
+
+
+
+
+
+
+
+
+
+const galleryEl = images.map(image =>{
+  const createdImg = document.createElement('img');
+  createdImg.src = image.url;
+  createdImg.alt = image.alt;
+  createdImg.width = 320;
+
+  const createdList = document.createElement('li');
+  console.log(createdList);
+  createdList.append(createdImg);
+  createdList.classList = 'image_list';
+return createdList;
+});
 
 const galleryPhotos = document.querySelector('.gallery');
-galleryPhotos.append(c);
-})
-
+galleryPhotos.append(...galleryEl);
